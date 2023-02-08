@@ -11,7 +11,8 @@ object Week1_Ceasar extends App {
 
   // Implenetér denne funktion
   def decipher(cipherText: String, offset: Int): String = {
-    ???
+    // Daniels 97 char løsning
+    cipherText.map(c=>(if(c.isLetterOrDigit)(c&96)+26-(offset+26-c%32)%(10+(c>>2&16))else +c).toChar)
   }
 
 
