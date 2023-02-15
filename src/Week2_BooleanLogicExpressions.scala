@@ -8,7 +8,7 @@ object Week2_BooleanLogicExpressions extends App {
   case class XorLogicGate(leftHandSide: BoolExp, rightHandSide: BoolExp) extends BoolExp
 
   def evaluateExpression(boolExp: BoolExp): Boolean = {
-    ???
+val a=b=>evaluateExpression(b);boolExp match{case TrueLiteral=>1>0case FalseLiteral=>1<0case NotLogicGate(b)=> !a(b)case AndLogicGate(l,r)=>a(l)&a(r)case OrLogicGate(l,r)=>a(l)|a(r)case XorLogicGate(l,r) => a(l)^a(r)}
   }
 
   // Vejledende test

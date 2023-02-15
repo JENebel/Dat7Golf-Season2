@@ -5,43 +5,43 @@
   Vi ved at en flise med en myrekoloni hver dag spreder sig til alle nabofliser.
   Dvs. nord, syd, øst, vest.
   Der kan kun være én myrekoloni pr. flise.
-  
+
   Størrelsen på terrassen er angivet i antal fliser i bredden og længden.
   Der er givet et array med de fliser der har kolonier i dag,
   og det skal så udregnes hvor mange fliser der har en koloni om 'days' dage.
-  
+
   Her er et lille eksempel med parametrene:
     width=5,
     length=4,
     colonies=Array(Point(2, 1), Point(0, 3)),
     days=2:
-  
+
   day 0:
   . . . . .
   . . X . .
   . . . . .
   X . . . .
-  
+
   day 1:
   . . X . .
   . X X X .
   X . X . .
   X X . . .
-  
+
   day 2:
   . X X X .
   X X X X X
   X X X X .
   X X X . .
-  
+
   Så her vil resultatet være 15
-  
+
   God fornøjelse!
-  
+
   Mail: joachim.e.nebel@gmail.com
 */
 
-object Week3_AntsColonies extends App {
+object Week3_AntColonies extends App {
   case class Point(x: Int, y: Int)
 
   def solve(width: Int, length: Int, colonies: Array[Point], days: Int): Int = {
@@ -57,7 +57,7 @@ object Week3_AntsColonies extends App {
   assert(solve(10, 10, Array(Point(5, 5)), 1) == 5)
   assert(solve(10, 10, Array(Point(5, 5)), 2) == 13)
   assert(solve(10, 10, Array(Point(0, 0)), 2) == 6)
-  assert(solve(10, 2, Array(Point(0, 0)), 2) == 5)
+  assert(solve(10, 2,  Array(Point(0, 0)), 2) == 5)
   assert(solve(10, 10, Array(Point(0, 0), Point(1, 1)), 3) == 17)
   assert(solve(10, 10, Array(Point(0, 0), Point(1, 1), Point(9, 9)), 3) == 27)
 
