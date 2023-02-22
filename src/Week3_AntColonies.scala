@@ -45,7 +45,9 @@ object Week3_AntColonies extends App {
   case class Point(x: Int, y: Int)
 
   def solve(width: Int, length: Int, colonies: Array[Point], days: Int): Int = {
-    ???
+    var s=colonies.toSet
+    for(_←1to days)for(Point(x,y)←s)for((a,b)←Seq((x-1,y),(x+1,y),(x,y-1),(x,y+1)))s+=Point(a.abs-a/width,b.abs-b/length)
+    s.size
   }
 
   // Eksemplet

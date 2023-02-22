@@ -8,8 +8,14 @@ object Week2_BooleanLogicExpressions extends App {
   case class XorLogicGate(leftHandSide: BoolExp, rightHandSide: BoolExp) extends BoolExp
 
   def evaluateExpression(boolExp: BoolExp): Boolean = {
-    // Lasses 173 char løsning
-    lazy val f:Any⇒Boolean={case NotLogicGate(b)⇒!f(b)case AndLogicGate(l,r)⇒f(l)&f(r)case OrLogicGate(l,r)⇒f(l)|f(r)case XorLogicGate(l,r)⇒f(l)^f(r)case n⇒n.## %2<0}
+    // Lasses 173 char løsning. Skrevet lidt pænere
+    lazy val f:Any⇒Boolean={
+      case NotLogicGate(b)⇒ !f(b)
+      case AndLogicGate(l,r)⇒f(l)&f(r)
+      case OrLogicGate(l,r)⇒f(l)|f(r)
+      case XorLogicGate(l,r)⇒f(l)^f(r)
+      case n⇒n.## %2<0
+    }
     f(boolExp)
   }
 

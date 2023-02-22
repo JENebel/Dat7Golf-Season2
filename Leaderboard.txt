@@ -1,7 +1,7 @@
 Navn        Point
-Daniel      9
-Lasse       9
-Jacob       4
+Lasse       12
+Daniel      11
+Jacob       5
 Joakim      3
 Oliver      3
 Simon:      2
