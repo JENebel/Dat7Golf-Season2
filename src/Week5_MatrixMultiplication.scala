@@ -4,7 +4,8 @@ object Week5_MatrixMultiplication extends App {
   type Matrix = mutable.ArraySeq[mutable.ArraySeq[Double]]
 
   def matMult(A: Matrix, B: Matrix): Matrix = {
-    ???
+    // Daniels med 121 chars
+    mutable.ArraySeq.from((0to A.size-1).map(y⇒((0to B(0).size-1).map(x⇒(0to B.size-1).map(v⇒A(y)(v)*B(v)(x)).sum)).toArray))
   }
 
   val A: Matrix = mutable.ArraySeq(
