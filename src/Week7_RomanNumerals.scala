@@ -18,7 +18,7 @@ object Week7_RomanNumerals extends App {
   assert(decodeYear("M") == 1000)
 
   assert(decodeYear("IV") == 4)
-  assert(decodeYear("VII") == 8)
+  assert(decodeYear("VIII") == 8)
   assert(decodeYear("XCIX") == 99)
   assert(decodeYear("CCI") == 201)
   assert(decodeYear("MDCXIX") == 1619)
