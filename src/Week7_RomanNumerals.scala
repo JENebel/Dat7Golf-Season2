@@ -6,7 +6,10 @@
 
 object Week7_RomanNumerals extends App {
   def decodeYear(number: String): Int = {
-    ???
+    // Lasses løsning
+    val(t,n)=(Map(73→1,86→5,88→10,76→50,67→100,68→500,77→1000),number)
+    val(i,o)=n.tail.foldLeft((0,t(n(0))))((a,x)⇒(if(a._2>=t(x))a._1+a._2 else a._1-a._2,t(x)))
+    i+o
   }
 
   assert(decodeYear("I") == 1)
