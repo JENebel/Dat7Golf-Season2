@@ -1,6 +1,6 @@
 Navn        Point
-Lasse       17
-Daniel      16
+Lasse       21
+Daniel      17
 Jacob       5
 Joakim      3
 Oliver      3
